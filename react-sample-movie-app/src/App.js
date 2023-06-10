@@ -10,7 +10,7 @@ const API_URL = process.env.REACT_APP_API_URL;
 function App() {
   const [movies, setMovies] = useState([]);
   const [val, setval] = useState('');
-
+  
   const searchMovies = async(title) => {
     const response = await fetch(`${API_URL}&s=${title}`);
     const data = await response.json();
